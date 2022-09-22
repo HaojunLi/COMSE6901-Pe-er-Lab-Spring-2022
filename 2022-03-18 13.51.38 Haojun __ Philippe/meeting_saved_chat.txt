@@ -1,0 +1,64 @@
+13:15:52 From  Philippe Chlenski  to  Everyone:
+	https://github.com/pchlenski/misdeed/blob/main/src/OmicsGenerator.py#L1089
+13:16:31 From  Philippe Chlenski  to  Everyone:
+	d = sigma * np.sqrt(n * C) + 1
+13:16:39 From  Philippe Chlenski  to  Everyone:
+	Args:
+	        -----
+	        C:
+	            Float in (0,1]: Sparsity parameter. Higher C = less sparse.
+	        d:
+	            Float. Negative self-interaction size. If set to None/default, it will be computed automatically as sigma - sqrt(n * C) + 1.
+	        sigma:
+	            Float. Variance used to generate multivariate normal covariance matrix.
+	        rho:
+	            Float in [-1, 1]. Correlation term of covariance matrix. Higher rho = positive connectance = mutualism =
+	            harder to stabilize. Lower rho = predator-prey--type relationships = easier to stabilize.
+13:17:36 From  Philippe Chlenski  to  Everyone:
+	https://www.nature.com/articles/nature10832.pdf
+13:19:24 From  Philippe Chlenski  to  Everyone:
+	cov = sigma ** 2 * np.array([[1, rho], [rho, 1]])
+13:21:00 From  Philippe Chlenski  to  Everyone:
+	ways to fix sigma:
+13:21:08 From  Philippe Chlenski  to  Everyone:
+	-distance between common ancestors
+13:21:22 From  Philippe Chlenski  to  Everyone:
+	-minimum pairwise distance
+13:21:27 From  Philippe Chlenski  to  Everyone:
+	-maximum pairwise distance
+13:21:31 From  Philippe Chlenski  to  Everyone:
+	-distance between random pair
+13:24:25 From  Philippe Chlenski  to  Everyone:
+	within cluster interaction (penalty) terms:
+13:24:36 From  Philippe Chlenski  to  Everyone:
+	-i think the safest approach is to use the MAXIMUM pairwise distance
+13:24:57 From  Philippe Chlenski  to  Everyone:
+	-alternatively: the sum of all distances may be important
+13:31:53 From  Philippe Chlenski  to  Everyone:
+	plt.imshow()
+13:32:13 From  Philippe Chlenski  to  Everyone:
+	seaborn
+13:32:26 From  Philippe Chlenski  to  Everyone:
+	seaborn will do heatmaps with a tree
+13:32:48 From  Philippe Chlenski  to  Everyone:
+	https://cdn-images-1.medium.com/max/1600/1*VvdTRTn3GENwENH2O6cUNQ.png
+13:34:03 From  Philippe Chlenski  to  Everyone:
+	https://seaborn.pydata.org/generated/seaborn.clustermap.html
+13:36:37 From  Philippe Chlenski  to  Everyone:
+	for seaborn:
+13:36:46 From  Philippe Chlenski  to  Everyone:
+	input = interaction matrix AND phylogenetic tree
+13:36:58 From  Philippe Chlenski  to  Everyone:
+	output = heatmap of interaction matrix clustered by phylogenetic tree
+13:37:24 From  Philippe Chlenski  to  Everyone:
+	normal seaborn clustermap just uses a matrix and infers a tree; we want to override this and use a ground-truth tree instead
+13:37:43 From  Philippe Chlenski  to  Everyone:
+	{row,col}_linkagenumpy.ndarray, optional
+	
+	    Precomputed linkage matrix for the rows or columns. See scipy.cluster.hierarchy.linkage() for specific formats.
+13:37:59 From  Philippe Chlenski  to  Everyone:
+	row_linkage=xxx, col_linkage=xxx
+13:43:44 From  Philippe Chlenski  to  Everyone:
+	https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html
+13:45:09 From  Philippe Chlenski  to  Everyone:
+	https://stackoverflow.com/questions/31033835/newick-tree-representation-to-scipy-cluster-hierarchy-linkage-matrix-format'

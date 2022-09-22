@@ -1,0 +1,8 @@
+# Colab imports
+from google.colab import drive
+drive.mount('/content/drive')
+/content/drive/My Drive/
+/content/drive/My Drive/folder_xyz
+
+
+install.packages('tidymodels')

@@ -1,0 +1,46 @@
+18:46:54 From  Philippe Chlenski  to  Everyone:
+	generalized lotka-volterra equations
+18:46:58 From  Philippe Chlenski  to  Everyone:
+	community matrix
+18:52:00 From  Philippe Chlenski  to  Everyone:
+	PTRs are measured from liver transplant dataset
+18:52:39 From  Philippe Chlenski  to  Everyone:
+	https://www.nature.com/articles/s41467-019-12633-4
+18:53:01 From  Philippe Chlenski  to  Everyone:
+	Sequencing data are publicly available through the NCBI Sequencing Read Archive (SRA) (accession number SRP185798)
+18:53:51 From  Philippe Chlenski  to  Everyone:
+	coPTR + annavajhala et al dataset = our dataset
+18:53:55 From  Philippe Chlenski  to  Everyone:
+	tree is from IGGdb
+18:54:00 From  Philippe Chlenski  to  Everyone:
+	coPTR used IGGdb for alignment
+18:54:48 From  Philippe Chlenski  to  Everyone:
+	https://www.biorxiv.org/content/10.1101/2021.02.02.429365v1
+18:56:24 From  Philippe Chlenski  to  Everyone:
+	coPTR: input=reads from annavajhala et al, reference genomes from IGGdb; output=log2-PTR spreadsheet
+18:57:05 From  Philippe Chlenski  to  Everyone:
+	lambda: input=log2-PTR spreadsheet, tree from IGGdb; output=vector of lambda value estimates
+18:57:29 From  Philippe Chlenski  to  Everyone:
+	np.exp2(data) -> lambda analysis
+18:58:09 From  Philippe Chlenski  to  Everyone:
+	s. nayfach
+18:58:12 From  Philippe Chlenski  to  Everyone:
+	stephen nayfach
+19:16:25 From  Philippe Chlenski  to  Everyone:
+	conclusion: no evidence of phylogenetic signal in this system
+19:16:38 From  Philippe Chlenski  to  Everyone:
+	todo: test phylogenetic signal in other PTR estimates
+19:16:49 From  Philippe Chlenski  to  Everyone:
+	todo: assess whether all assumptions are appropriate to the data
+19:17:10 From  Philippe Chlenski  to  Everyone:
+	if we pass all of these tests, this could be evidence for the absence of phylogenetic structure in microbial dynamics
+19:17:17 From  Philippe Chlenski  to  Everyone:
+	^this would be a contribution to the field
+19:18:05 From  Philippe Chlenski  to  Everyone:
+	"absence of evidence is not evidence of absence"
+19:18:55 From  Philippe Chlenski  to  Everyone:
+	want to go from absence of evidence --> evidence of absence
+19:20:01 From  Philippe Chlenski  to  Everyone:
+	2 ** data
+19:20:10 From  Philippe Chlenski  to  Everyone:
+	np.exp2()
